@@ -1,6 +1,13 @@
+.movies {
+  width: 100%;
+  background-image: url(https://bogatyr.club/uploads/posts/2021-11/thumbs/1636962610_3-bogatyr-club-p-sinii-fon-na-rabochii-stol-3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .moviesHeder {
   font-size: 32px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: blanchedalmond;
+  text-align: center;
 }

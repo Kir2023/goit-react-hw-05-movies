@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { fetchPopularMovies } from 'services/MoviesServices';
 import css from './Home.module.css';
 import { MoviesList } from 'components/MovieList/MovieList';
+import { Loader } from 'components/Loader/Loader';
 
 export const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -11,8 +12,8 @@ export const Home = () => {
     const fetchData = async () => {
       try {
         setIsLoading(true);
-        const movie = await fetchPopularMovies;
-        setPopularMovies(movie);
+        const movies = await fetchPopularMovies();
+        setPopularMovies(movies);
       } catch (err) {
         alert('Sorry, something goes wrong');
       } finally {
@@ -23,11 +24,13 @@ export const Home = () => {
   }, []);
 
   return (
-    <div>
+    <div className={css.movies}>
       <h1 className={css.moviesHeder}>The most popular films today</h1>
-      {isLoading
-        ? alert('Loading')
-        : popularMovies.length > 0 && <MoviesList films={popularMovies} />}
+      {isLoading ? (
+        <Loader />
+      ) : (
+        popularMovies.length > 0 && <MoviesList films={popularMovies} />
+      )}
     </div>
   );
 };

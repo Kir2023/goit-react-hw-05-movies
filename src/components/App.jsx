@@ -10,13 +10,17 @@ export const App = () => {
         justifyContent: 'center',
         alignItems: 'center',
         fontSize: 40,
-        color: '#010101',
-        backgroundColor: '#0014a8',
       }}
     >
-      {/* <NavLink className="header-link" to="/">
-        Home
-      </NavLink> */}
+      {' '}
+      <header className="header">
+        <NavLink className="header-link" to="/">
+          Home
+        </NavLink>
+        <NavLink className="header-link" to="/">
+          Movies
+        </NavLink>
+      </header>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
