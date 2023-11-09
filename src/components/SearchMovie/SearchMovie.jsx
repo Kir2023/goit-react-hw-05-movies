@@ -1,10 +1,15 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import css from './SearchMovie.module.css';
+import { useSearchParams } from 'react-router-dom';
 
-export const SearchMovie = ({ onSubmit, query }) => {
+export const SearchMovie = ({ onSubmit }) => {
   const [value, setValue] = useState('');
   const [searchText, setSearchText] = useState('');
+  // eslint-disable-next-line
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const movieName = searchParams.get('query') || '';
 
   useEffect(() => {
     setSearchText(value);
@@ -19,6 +24,11 @@ export const SearchMovie = ({ onSubmit, query }) => {
 
     if (searchText.trim() === '') {
       alert('Please enter the name of serching film');
+      return;
+    }
+    if (movieName === value) {
+      alert(`You are already viewing the movies on query ${searchText}`);
+      setValue('');
       return;
     }
     setSearchText(searchText.trim());

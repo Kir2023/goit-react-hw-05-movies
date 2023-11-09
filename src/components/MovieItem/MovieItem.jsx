@@ -6,6 +6,9 @@ import css from './MovieItem.module.css';
 export const MovieItem = ({ id, poster_path, title }) => {
   const location = useLocation();
 
+  const defaultImg =
+    'https://ireland.apollo.olxcdn.com/v1/files/0iq0gb9ppip8-UA/image;s=1000x700';
+
   return (
     <li className={css.movieItem} key={id}>
       <NavLink
@@ -14,7 +17,11 @@ export const MovieItem = ({ id, poster_path, title }) => {
         state={{ from: location }}
       >
         <img
-          src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+          src={
+            poster_path
+              ? `https://image.tmdb.org/t/p/w500${poster_path}`
+              : defaultImg
+          }
           alt={title}
           width="190px"
           className={css.poster}
