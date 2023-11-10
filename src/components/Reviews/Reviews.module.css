@@ -1,0 +1,35 @@
+.reviewsContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(https://images.wallpaperscraft.ru/image/single/linii_shtrihi_sinij_104907_1920x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 4px;
+}
+.reviewsList {
+  list-style-type: none;
+  padding-top: 12px;
+}
+.reviewsItem {
+  border: 2px dotted aqua;
+  margin-top: 16px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.reviewAuthor {
+  font-size: 44px;
+  margin-left: 8px;
+  margin-top: 12px;
+  color: antiquewhite;
+}
+.reviewText {
+  font-size: 32px;
+  margin-left: 8px;
+  color: antiquewhite;
+}
+.noReviewsText {
+  font-size: 44px;
+  color: antiquewhite;
+  text-align: center;
+  padding-top: 24px;
+}

@@ -74,7 +74,13 @@ export const MovieDetails = () => {
               </button>
             </NavLink>
           </li>
-          <li></li>
+          <li>
+            <NavLink to="reviews" state={{ from: backLink }}>
+              <button type="button" className={css.reviewsButton}>
+                Rewievs
+              </button>
+            </NavLink>
+          </li>
         </ul>
       </div>
       <Outlet />

@@ -47,7 +47,8 @@
   display: flex;
   gap: 32px;
 }
-.castButton {
+.castButton,
+.reviewsButton {
   font-size: 24px;
   border-radius: 15px;
   padding: 8px;
@@ -58,7 +59,8 @@
   color: antiquewhite;
   border-color: antiquewhite;
 }
-.castButton:hover {
+.castButton:hover,
+.reviewsButton:hover {
   color: black;
   background-color: antiquewhite;
 }
