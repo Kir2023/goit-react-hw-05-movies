@@ -4,7 +4,7 @@ import css from './Home.module.css';
 import { MoviesList } from 'components/MovieList/MovieList';
 import { Loader } from 'components/Loader/Loader';
 
-export const Home = () => {
+const Home = () => {
   const [popularMovies, setPopularMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -24,7 +24,7 @@ export const Home = () => {
   }, []);
 
   return (
-    <div className={css.movies}>
+    <div>
       <h1 className={css.moviesHeder}>The most popular films today</h1>
       {isLoading ? (
         <Loader />
@@ -34,3 +34,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;

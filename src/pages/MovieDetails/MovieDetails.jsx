@@ -3,7 +3,7 @@ import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/MoviesServices';
 import css from './MovieDetails.module.css';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
   const location = useLocation();
@@ -87,3 +87,5 @@ export const MovieDetails = () => {
     </div>
   );
 };
+
+export default MovieDetails;

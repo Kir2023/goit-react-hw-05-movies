@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchReviews } from 'services/MoviesServices';
 import css from './Reviews.module.css';
 
-export const Reviews = () => {
+const Reviews = () => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
 
@@ -41,3 +41,5 @@ export const Reviews = () => {
     </div>
   );
 };
+
+export default Reviews;

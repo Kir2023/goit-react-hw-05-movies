@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { fetchCast } from 'services/MoviesServices';
 import css from './Cast.module.css';
 
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
   const [cast, setCast] = useState([]);
 
@@ -53,3 +53,5 @@ export const Cast = () => {
     </div>
   );
 };
+
+export default Cast;
