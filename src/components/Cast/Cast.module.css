@@ -1,0 +1,27 @@
+.castContainer {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(https://images.wallpaperscraft.ru/image/single/linii_shtrihi_sinij_104907_1920x1080.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.castList {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 8px;
+  padding-top: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.actorName {
+  font-size: 28px;
+  color: antiquewhite;
+}
+.noActorsText {
+  font-size: 44px;
+  color: antiquewhite;
+  text-align: center;
+  padding-top: 24px;
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { NavLink, useLocation, useParams } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useParams } from 'react-router-dom';
 import { fetchMovieDetails } from 'services/MoviesServices';
 import css from './MovieDetails.module.css';
 
@@ -65,6 +65,19 @@ export const MovieDetails = () => {
           </p>
         </div>
       </div>
+      <div>
+        <ul className={css.moviesButtonList}>
+          <li>
+            <NavLink to="cast" state={{ from: backLink }}>
+              <button type="button" className={css.castButton}>
+                Cast
+              </button>
+            </NavLink>
+          </li>
+          <li></li>
+        </ul>
+      </div>
+      <Outlet />
     </div>
   );
 };
